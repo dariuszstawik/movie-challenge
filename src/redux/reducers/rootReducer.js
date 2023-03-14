@@ -2,11 +2,11 @@ import { actionTypes } from "../actions/actionTypes";
 
 const initialState = {
   secondsAmount: 0,
-  selectedMovie: 2,
-  randomNumbers,
+  selectedMovie: {},
+  randomNumbers: [0, 0, 0, 0],
   results: [],
   isResultVisible: false,
-  timing: [0, 0],
+  timeRange: [0, 0],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -25,7 +25,7 @@ const rootReducer = (state = initialState, action) => {
         selectedMovie: payload,
       };
 
-    case actionTypes.CHOOSE_RANDOM_NUMBERS:
+    case actionTypes.CREATE_RANDOM_NUMBERS:
       return {
         ...state,
         randomNumbers: payload,
@@ -34,18 +34,22 @@ const rootReducer = (state = initialState, action) => {
     case actionTypes.SET_RESULTS:
       return {
         ...state,
-        results: [...results, payload],
+        results: [...state.results, payload],
       };
 
-    case "SET_IS_RESULT_VISIBLE":
+    case actionTypes.SET_IS_RESULT_VISIBLE:
       return {
         ...state,
         isResultVisible: payload,
       };
-    case "SET_TIME_RANGE":
+    case actionTypes.SET_TIME_RANGE:
       return {
         ...state,
-        timing: payload,
+        timeRange: payload,
       };
+    default:
+      return state;
   }
 };
+
+export default rootReducer;

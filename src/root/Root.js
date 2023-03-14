@@ -1,7 +1,12 @@
 import React from "react";
+import Router from "../router/Router";
 
 const Root = () => {
-  return <div>Root</div>;
+  return (
+    <>
+      <Router />
+    </>
+  );
 };
 
 export default Root;

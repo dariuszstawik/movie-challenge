@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   font-size: inherit;
   font-family: inherit;
   background-color: white;

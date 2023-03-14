@@ -14,9 +14,9 @@ export const selectMovie = (payload) => {
   };
 };
 
-export const chooseRandomNumbers = (payload) => {
+export const createRandomNumbers = (payload) => {
   return {
-    type: actionTypes.CHOOSE_RANDOM_NUMBERS,
+    type: actionTypes.CREATE_RANDOM_NUMBERS,
     payload,
   };
 };
