@@ -7,6 +7,7 @@ const initialState = {
   results: [],
   isResultVisible: false,
   timeRange: [0, 0],
+  isYoutubePlayerVisible: false,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -46,6 +47,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         timeRange: payload,
+      };
+    case actionTypes.SET_IS_YOUTUBE_PLAYER_VISIBLE:
+      return {
+        ...state,
+        isYoutubePlayerVisible: payload,
       };
     default:
       return state;

@@ -4,21 +4,26 @@ import Container from "../../components/atoms/Container";
 import ContentBox from "../../components/atoms/ContentBox";
 import AnswearsList from "../../components/organisms/AnswearsList";
 import StartForm from "../../components/organisms/StartForm";
+import Stats from "../../components/organisms/Stats";
 import YoutubePlayer from "../../components/organisms/Youtube-Player";
 
 const Start = () => {
   const selectedSecondsAmount = useSelector((state) => state.secondsAmount);
+  const selectedIsYoutubePlayerVisible = useSelector(
+    (state) => state.isYoutubePlayerVisible
+  );
 
   return (
     <Container>
       <ContentBox>
         <StartForm />
-        {selectedSecondsAmount && selectedSecondsAmount !== 999 ? (
+        {selectedSecondsAmount && selectedIsYoutubePlayerVisible ? (
           <YoutubePlayer />
         ) : (
           ""
         )}
         <AnswearsList />
+        <Stats />
       </ContentBox>
     </Container>
   );

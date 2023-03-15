@@ -41,3 +41,10 @@ export const setTimeRange = (payload) => {
     payload,
   };
 };
+
+export const setYoutubeVisibility = (payload) => {
+  return {
+    type: actionTypes.SET_IS_YOUTUBE_PLAYER_VISIBLE,
+    payload,
+  };
+};

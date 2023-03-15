@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import YouTube from "react-youtube";
-import { setSecondsAmount } from "../../../redux/actions";
+import { setSecondsAmount, setYoutubeVisibility } from "../../../redux/actions";
 import { StyledYoutubePlayer } from "./StyledYoutubePlayer";
 
 const YoutubePlayer = () => {
@@ -29,11 +29,9 @@ const YoutubePlayer = () => {
         opts={opts}
         loading="eager"
         onEnd={() => {
-          dispatch(setSecondsAmount(999));
+          dispatch(setYoutubeVisibility(false));
         }}
-      >
-        {YouTube.PlayerState.ENDED ? console.log("koniec") : ""}
-      </YouTube>
+      ></YouTube>
     </StyledYoutubePlayer>
   );
 };
