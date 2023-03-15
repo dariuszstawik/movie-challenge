@@ -6,8 +6,8 @@ export const StyledLogo = styled.h1`
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
-  margin-top: 5%;
-  margin-bottom: 1%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   letter-spacing: 3px;
   text-align: "left";
 `;

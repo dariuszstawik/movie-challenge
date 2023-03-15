@@ -64,7 +64,7 @@ const AnswearsList = () => {
       timeToAnswear,
     };
     dispatch(setResults(result));
-    return result;
+    return isAnswearCorrect;
   };
 
   const nextRound = () => {
@@ -88,11 +88,13 @@ const AnswearsList = () => {
             // <LiItem movie={movie} />
             <li>
               <button
+                className="liButton"
+                disabled={selectedIsResultVisible || !selectedSecondsAmount}
                 onClick={(e) => {
                   dispatch(setIsResultVisible(true));
                   e.target.className = checkResult(title)
-                    ? "winBackground"
-                    : "lossBackground";
+                    ? "liButton winBackground"
+                    : "liButton lossBackground";
                 }}
               >
                 {title}
@@ -110,7 +112,9 @@ const AnswearsList = () => {
       <Header>Twoja odpowiedź:</Header>
       {showAnswearOptions()}
       {/* <Button onClick={nextRound}>Następne</Button> */}
-      <button onClick={nextRound}>Następne</button>
+      <button className="button" onClick={nextRound}>
+        Następne
+      </button>
       <h4 className={selectedIsResultVisible ? "isActive" : ""}>
         Prawidłowa odpowiedź: {selectedMovie.title}
       </h4>

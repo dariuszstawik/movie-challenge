@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Header from "../../atoms/Header";
+import { StyledStats } from "./StyledStats";
 
 const Stats = () => {
   const selectedResults = useSelector((state) => state.results);
@@ -23,12 +24,12 @@ const Stats = () => {
   };
 
   return (
-    <>
+    <StyledStats>
       <Header>Twoje statystyki:</Header>
       <p>Dobre odpowiedzi: {answearStats(true)}</p>
       <p>Błędne odpowiedzi: {answearStats(false)}</p>
       <p>Średni czas na dobrą odpowiedź: {timeStats()}</p>
-    </>
+    </StyledStats>
   );
 };
 

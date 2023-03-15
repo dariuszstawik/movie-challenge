@@ -10,7 +10,11 @@ export const navLinksData = [
     path: routes.zasady,
   },
   {
-    content: "o autorze",
+    content: "kategoria",
+    path: routes.zasady,
+  },
+  {
+    content: "autor",
     path: routes.oAutorze,
   },
 ];

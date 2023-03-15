@@ -16,12 +16,13 @@ const Start = () => {
   return (
     <Container>
       <ContentBox>
-        <StartForm />
         {selectedSecondsAmount && selectedIsYoutubePlayerVisible ? (
           <YoutubePlayer />
         ) : (
           ""
         )}
+
+        <StartForm />
         <AnswearsList />
         <Stats />
       </ContentBox>

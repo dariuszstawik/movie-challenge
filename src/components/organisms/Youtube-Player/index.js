@@ -10,8 +10,8 @@ const YoutubePlayer = () => {
   const dispatch = useDispatch();
 
   const opts = {
-    height: "400",
-    width: "510",
+    height: "500",
+    width: "980",
     playerVars: {
       autoplay: 1,
       controls: 0,

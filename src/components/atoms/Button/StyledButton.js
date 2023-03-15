@@ -3,9 +3,10 @@ import styled, { css } from "styled-components";
 export const StyledButton = styled.button`
   font-size: inherit;
   font-family: inherit;
-  background-color: white;
   color: inherit;
+  background-color: white;
   cursor: pointer;
+  box-sizing: border-box;
 
   ${({ isInLiElement }) =>
     isInLiElement
@@ -13,9 +14,9 @@ export const StyledButton = styled.button`
           border: "none";
         `
       : css`
-          border: "1px solid black";
+          border: "1px solid gray";
           width: 80px;
           height: 40px;
-          font-weight: bold;
+          font-weight: 500;
         `}
 `;

@@ -16,20 +16,8 @@ body {
 width: 100vw;
 height: 100vh;
 font-family: "Montserrat";
-/* background-color: #675a55; */
-/* background-color: lightgray; */
-/* background-color: black; */
+border-top: 4px double black;
 margin:0;
 };
 
-h1{
-font-family: "ChicagoNeon";
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-margin-top: 5%;
-margin-bottom: 1%;
-letter-spacing: 3px;
-text-align: "left";
-}
 `;
