@@ -44,14 +44,6 @@ const AnswearsList = () => {
     );
   };
 
-  // useEffect(() => {
-  //   if (ref.current.classList.contains("lossBackground")) {
-  //     ref.current.classList.remove("lossBackground");
-  //   } else if (ref.current.classList.contains("winBackground")) {
-  //     ref.current.classList.remove("winBackground");
-  //   }
-  // }, [selectedRandomNumbers]);
-
   useEffect(() => {
     chooseRandomNumbers();
   }, []);

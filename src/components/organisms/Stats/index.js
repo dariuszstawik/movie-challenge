@@ -17,7 +17,6 @@ const Stats = () => {
     );
     let sum = 0;
     correctAnswearsArray.forEach(({ timeToAnswear }) => (sum += timeToAnswear));
-    // console.log(averageResponseTime);
     return isNaN(sum / correctAnswearsArray.length)
       ? ""
       : sum / correctAnswearsArray.length;
