@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const StyledNavLinks = styled.ul`
   width: 40%;
-  margin-top: 4%;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   a {
     display: inline-block;
@@ -13,6 +13,5 @@ export const StyledNavLinks = styled.ul`
     color: black;
     text-decoration: none;
     font-weight: 500;
-    /* border-right: 1px solid black; */
   }
 `;

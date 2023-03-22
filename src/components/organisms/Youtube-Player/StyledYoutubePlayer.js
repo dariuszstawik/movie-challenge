@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledYoutubePlayer = styled.div`
-  width: 980px;
+  width: 800px;
   position: relative;
   background-color: black;
   grid-column: 1/3;
@@ -10,7 +10,7 @@ export const StyledYoutubePlayer = styled.div`
 
   &:after {
     content: "";
-    width: 980px;
+    width: 800px;
     height: 70px;
     position: absolute;
     background-color: black;

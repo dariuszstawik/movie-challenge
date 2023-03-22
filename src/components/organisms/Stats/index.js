@@ -25,10 +25,10 @@ const Stats = () => {
 
   return (
     <StyledStats>
-      <Header>Twoje statystyki:</Header>
+      <Header>Statystyki Twojej gry:</Header>
       <p>Dobre odpowiedzi: {answearStats(true)}</p>
       <p>Błędne odpowiedzi: {answearStats(false)}</p>
-      <p>Średni czas na dobrą odpowiedź: {timeStats()}</p>
+      <p>Średni czas na dobrą odpowiedź: {timeStats()} sek.</p>
     </StyledStats>
   );
 };

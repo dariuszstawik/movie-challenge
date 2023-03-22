@@ -1,12 +1,24 @@
 import styled from "styled-components";
 
 export const StyledNavbar = styled.div`
-  width: 80%;
+  width: 72%;
   box-sizing: border-box;
-  border-bottom: 4px double black;
+  border-top: 3px solid black;
   margin: 0 auto;
+  transform: translateX(6%);
   padding: 0 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    border-bottom: 3px solid black;
+    bottom: 0;
+    left: 5%;
+  }
 `;

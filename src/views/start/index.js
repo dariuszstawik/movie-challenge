@@ -14,19 +14,16 @@ const Start = () => {
   );
 
   return (
-    <Container>
-      <ContentBox>
-        {selectedSecondsAmount && selectedIsYoutubePlayerVisible ? (
-          <YoutubePlayer />
-        ) : (
-          ""
-        )}
+    <>
+      {selectedSecondsAmount && selectedIsYoutubePlayerVisible ? (
+        <YoutubePlayer />
+      ) : (
+        ""
+      )}
 
-        <StartForm />
-        <AnswearsList />
-        <Stats />
-      </ContentBox>
-    </Container>
+      <StartForm />
+      <AnswearsList />
+    </>
   );
 };
 

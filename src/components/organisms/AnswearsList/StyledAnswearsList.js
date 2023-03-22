@@ -1,24 +1,19 @@
 import styled from "styled-components";
 
 export const StyledAnswearList = styled.div`
-  width: 75%;
-  grid-column: 1/3;
-  grid-row: 2/3;
+  width: 100%;
   position: relative;
-  margin-left: 2.5%;
 
   h4 {
-    display: none;
+    visibility: hidden;
   }
 
   .isActive {
-    display: block;
+    visibility: visible;
   }
 
   li {
-    /* list-style: none; */
     line-height: 2.5;
-
     border-bottom: 1px solid black;
   }
 
@@ -36,18 +31,43 @@ export const StyledAnswearList = styled.div`
     font-size: inherit;
     font-family: inherit;
     line-height: 2.5;
-    background-color: white;
-    color: inherit;
+    background-color: #545454ff;
+    color: white;
     cursor: pointer;
     border: "2px solid gray";
-    width: 100px;
-    height: 40px;
+    border: none;
+    width: 110px;
+    height: 45px;
     font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     right: 0;
+
+    &::after {
+      content: "";
+      width: 110px;
+      height: 45px;
+      background-color: transparent;
+      border: 1px solid black;
+      position: absolute;
+      top: 5px;
+      left: -7px;
+    }
+
+    &:hover {
+      &::after {
+        content: "";
+        width: 110px;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid black;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 
   .winBackground {

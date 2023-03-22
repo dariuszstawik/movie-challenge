@@ -1,8 +1,10 @@
 import React from "react";
 import { StyledContentBox } from "./StyledContentBox";
 
-const ContentBox = ({ children }) => {
-  return <StyledContentBox>{children}</StyledContentBox>;
+const ContentBox = ({ isStartPage, children }) => {
+  return (
+    <StyledContentBox isStartPage={isStartPage}>{children}</StyledContentBox>
+  );
 };
 
 export default ContentBox;

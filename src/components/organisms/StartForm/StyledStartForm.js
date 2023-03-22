@@ -1,29 +1,49 @@
 import styled from "styled-components";
 
 export const StyledStartForm = styled.form`
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin-left: 5%;
   position: relative;
-
-  &:after {
-    content: "";
-    width: 2px;
-    height: 120px;
-    color: gray;
-    background-color: gray;
-    border-right: 1px solod gray;
-    position: absolute;
-    top: 20%;
-    right: 0;
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 
   input {
     box-sizing: border-box;
     width: 130px;
     height: 42px;
     border: 1px solid gray;
-    margin-right: 5%;
     padding: 3%;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+
+  Button {
+    margin-left: 17%;
+    margin-right: 5%;
+    position: relative;
+    border: none;
+
+    &::after {
+      content: "";
+      width: 80px;
+      height: 40px;
+      background-color: transparent;
+      border: 1px solid black;
+      position: absolute;
+      top: 5px;
+      left: -7px;
+    }
+
+    &:hover {
+      &::after {
+        content: "";
+        width: 80px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid black;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 `;

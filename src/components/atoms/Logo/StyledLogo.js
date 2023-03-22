@@ -5,9 +5,9 @@ export const StyledLogo = styled.h1`
   font-family: "ChicagoNeon";
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  letter-spacing: 3px;
+  font-size: 49px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-left: 1%;
   text-align: "left";
 `;

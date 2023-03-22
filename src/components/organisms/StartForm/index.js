@@ -45,9 +45,14 @@ const StartForm = () => {
 
   return (
     <StyledStartForm onSubmit={handleStartForm}>
-      <Header>Po ilu sekundach zgadniesz tytuł?</Header>
-      <p>Najlepsi trafiają po jednej!</p>
-      <input id="seconds" name="seconds" placeholder="wpisz___"></input>
+      <div>
+        <Header>Po ilu sekundach zgadniesz tytuł?</Header>
+        <p>Najlepsi trafiają po jednej!</p>
+      </div>
+      <div>
+        {" "}
+        <input id="seconds" name="seconds" placeholder="wpisz___"></input>
+      </div>
       <Button type="submit">Graj</Button>
     </StyledStartForm>
   );

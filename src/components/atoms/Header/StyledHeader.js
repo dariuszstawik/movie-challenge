@@ -5,7 +5,9 @@ export const StyledHeader = styled.h2`
   font-size: 18px;
   position: relative;
   padding-top: 20px;
-  &::after {
+  margin-top: 0;
+  margin-bottom: 0;
+  &::before {
     content: "";
     width: 40px;
     height: 1.5px;
@@ -14,7 +16,4 @@ export const StyledHeader = styled.h2`
     top: 0;
     left: -5px;
   }
-  /* line-height: 2; */
-  /* border-bottom: 1px solid black; */
-  /* text-decoration: underline; */
 `;

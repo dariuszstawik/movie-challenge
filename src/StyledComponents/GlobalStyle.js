@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import ChicagoNeon from "./ChicagoNeon.woff";
+import charlieChaplinImg from "./charlie-chaplin.png";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -14,10 +15,12 @@ html {
 
 body {
 width: 100vw;
+overflow: hidden;
 height: 100vh;
 font-family: "Montserrat";
-border-top: 4px double black;
+font-size: 15px;
 margin:0;
+/* background-image: url(${charlieChaplinImg}); */
 };
 
 `;
