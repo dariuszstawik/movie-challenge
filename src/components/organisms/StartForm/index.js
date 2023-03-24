@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import Button from "../../atoms/Button";
 import Header from "../../atoms/Header";
-import { StyledStartForm } from "./StyledStartForm";
+import {
+  StyledInputAndButtonWrapper,
+  StyledStartForm,
+} from "./StyledStartForm";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setSecondsAmount,
@@ -18,7 +21,7 @@ const StartForm = () => {
   );
 
   const showYoutubePlayer = () => {
-    dispatch(setYoutubeVisibility(true));
+    selectedSecondsAmount && dispatch(setYoutubeVisibility(true));
     console.log("Wyśietlam Youtube");
   };
 
@@ -44,16 +47,22 @@ const StartForm = () => {
   };
 
   return (
-    <StyledStartForm onSubmit={handleStartForm}>
+    <StyledStartForm
+      visibility={selectedIsYoutubePlayerVisible}
+      onSubmit={handleStartForm}
+    >
       <div>
         <Header>Po ilu sekundach zgadniesz tytuł?</Header>
-        <p>Najlepsi trafiają po jednej!</p>
+        <p>
+          Wpisz dowolną liczbę sekund - po kliknięciu 'Graj' zobaczysz losowy
+          fragment jednego z czterech filmów wymienionych poniżej. Odpowiedzi
+          będą klikalne po wyświetleniu wideo.
+        </p>
       </div>
-      <div>
-        {" "}
+      <StyledInputAndButtonWrapper>
         <input id="seconds" name="seconds" placeholder="wpisz___"></input>
-      </div>
-      <Button type="submit">Graj</Button>
+        <Button type="submit">Graj</Button>
+      </StyledInputAndButtonWrapper>
     </StyledStartForm>
   );
 };

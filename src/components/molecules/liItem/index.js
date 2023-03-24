@@ -17,19 +17,7 @@ const LiItem = ({ movie }) => {
 
   return (
     <StyledLiItem>
-      <Button
-        // movie={movie}
-        isInLiElement
-        // onClick={(e) => {
-        //   checkResult(movie.title);
-        //   dispatch(setIsResultVisible(true));
-        //   e.target.className = checkResult(movie.title)
-        //     ? "winBackground"
-        //     : "lossBackground";
-        // }}
-      >
-        {movie.title}
-      </Button>
+      <Button isInLiElement>{movie.title}</Button>
     </StyledLiItem>
   );
 };

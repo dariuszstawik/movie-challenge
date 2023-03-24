@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const StyledAnswearList = styled.div`
   width: 100%;
   position: relative;
+  background-color: white;
+  padding: 5px;
 
   h4 {
     visibility: hidden;
@@ -10,6 +12,14 @@ export const StyledAnswearList = styled.div`
 
   .isActive {
     visibility: visible;
+  }
+
+  ol {
+    padding-inline-start: 0;
+    background-color: white;
+    @media (min-width: ${({ theme }) => theme.media.desktop}) {
+      padding-inline-start: 40px;
+    }
   }
 
   li {

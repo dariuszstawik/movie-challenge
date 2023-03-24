@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import YouTube from "react-youtube";
-import { setSecondsAmount, setYoutubeVisibility } from "../../../redux/actions";
+import { setYoutubeVisibility } from "../../../redux/actions";
 import { StyledYoutubePlayer } from "./StyledYoutubePlayer";
 
 const YoutubePlayer = () => {

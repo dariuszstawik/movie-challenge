@@ -20,7 +20,7 @@ const Stats = () => {
     correctAnswearsArray.forEach(({ timeToAnswear }) => (sum += timeToAnswear));
     return isNaN(sum / correctAnswearsArray.length)
       ? ""
-      : sum / correctAnswearsArray.length;
+      : (sum / correctAnswearsArray.length).toFixed(2);
   };
 
   return (

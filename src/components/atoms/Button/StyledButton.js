@@ -10,14 +10,10 @@ export const StyledButton = styled.button`
   border: "none";
 
   ${({ isInLiElement }) =>
-    isInLiElement
-      ? css`
-          border: "none";
-        `
-      : css`
-          border: "none";
-          width: 80px;
-          height: 40px;
-          font-weight: 500;
-        `}
+    !isInLiElement &&
+    css`
+      width: 80px;
+      height: 40px;
+      font-weight: 500;
+    `}
 `;

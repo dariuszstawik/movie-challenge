@@ -9,9 +9,13 @@ export const StyledNavbar = styled.div`
   padding: 0 2%;
   margin-bottom: 1%;
   margin-top: 1%;
-  display: flex;
-  justify-content: space-around;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+  @media (min-width: ${({ theme }) => theme.media.desktop}) {
+    justify-content: space-around;
+  }
 
   &::after {
     content: "";

@@ -1,6 +1,7 @@
 import { actionTypes } from "../actions/actionTypes";
 
 const initialState = {
+  isMobileMenuActive: false,
   secondsAmount: 0,
   selectedMovie: {},
   randomNumbers: [0, 0, 0, 0],
@@ -14,6 +15,12 @@ const rootReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    case actionTypes.TOGGLE_MOBILE_MENU:
+      return {
+        ...state,
+        isMobileMenuActive: !state.isMobileMenuActive,
+      };
+
     case actionTypes.SET_SECONDS_AMOUNT:
       return {
         ...state,

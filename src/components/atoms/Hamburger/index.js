@@ -1,8 +1,31 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMobileMenu } from "../../../redux/actions";
+import { StyledHamburger } from "./StyledHamburger";
+import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from "@mui/icons-material/Clear";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Hamburger = () => {
+  const dispatch = useDispatch();
+  const selectedIsMobileMenuActive = useSelector(
+    (state) => state.isMobileMenuActive
+  );
+
   return (
-    <img src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/34/null/external-hamburger-menu-bar-with-parallel-navigation-button-basic-light-tal-revivo.png" />
+    <StyledHamburger>
+      {selectedIsMobileMenuActive ? (
+        <CloseIcon
+          fontSize="large"
+          onClick={() => dispatch(toggleMobileMenu())}
+        />
+      ) : (
+        <MenuIcon
+          fontSize="large"
+          onClick={() => dispatch(toggleMobileMenu())}
+        />
+      )}
+    </StyledHamburger>
   );
 };
 

@@ -1,5 +1,11 @@
 import { actionTypes } from "./actionTypes";
 
+export const toggleMobileMenu = () => {
+  return {
+    type: actionTypes.TOGGLE_MOBILE_MENU,
+  };
+};
+
 export const setSecondsAmount = (payload) => {
   return {
     type: actionTypes.SET_SECONDS_AMOUNT,
