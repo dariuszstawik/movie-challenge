@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Container from "../components/atoms/Container";
 import ContentBox from "../components/atoms/ContentBox";
 import Navbar from "../components/organisms/Navbar";
@@ -12,12 +12,12 @@ import { routes } from "./routes";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Container>
         <Navbar />
         <ContentBox>
           <Routes>
-            <Route path={routes.start} element={<Start />} />
+            <Route exact path={routes.start} element={<Start />} />
             <Route path={routes.statystyki} element={<Statystyki />} />
             <Route path={routes.zasady} element={<Zasady />} />
             <Route path={routes.kategoria} element={<Kategoria />} />
@@ -25,7 +25,7 @@ const Router = () => {
           </Routes>
         </ContentBox>
       </Container>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
