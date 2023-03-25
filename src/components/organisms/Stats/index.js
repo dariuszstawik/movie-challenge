@@ -13,14 +13,17 @@ const Stats = () => {
   };
 
   const timeStats = () => {
-    const correctAnswearsArray = selectedResults.filter(
+    const correctAnswers = selectedResults.filter(
       ({ isAnswearCorrect }) => isAnswearCorrect === true
     );
-    let sum = 0;
-    correctAnswearsArray.forEach(({ timeToAnswear }) => (sum += timeToAnswear));
-    return isNaN(sum / correctAnswearsArray.length)
+
+    let totalTimeToAnswer = 0;
+    correctAnswers.forEach(
+      ({ timeToAnswear }) => (totalTimeToAnswer += timeToAnswear)
+    );
+    return isNaN(totalTimeToAnswer / correctAnswers.length)
       ? ""
-      : (sum / correctAnswearsArray.length).toFixed(2);
+      : (totalTimeToAnswer / correctAnswers.length).toFixed(2);
   };
 
   return (

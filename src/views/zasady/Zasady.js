@@ -1,7 +1,7 @@
 import React from "react";
 
 const Zasady = () => {
-  return <div>Zasady</div>;
+  return <div>w przygotowaniu</div>;
 };
 
 export default Zasady;

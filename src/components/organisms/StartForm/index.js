@@ -22,7 +22,6 @@ const StartForm = () => {
 
   const showYoutubePlayer = () => {
     selectedSecondsAmount && dispatch(setYoutubeVisibility(true));
-    console.log("Wyśietlam Youtube");
   };
 
   useEffect(() => {
@@ -35,7 +34,6 @@ const StartForm = () => {
 
   const handleStartForm = (e) => {
     e.preventDefault();
-    console.log(e.target.seconds);
     dispatch(setSecondsAmount(Number(e.target.seconds.value)));
     e.target.reset();
   };

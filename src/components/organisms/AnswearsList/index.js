@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { moviesData } from "../../../movies-data/moviesData";
 import {
-  createRandomNumbers,
+  createAnswerOptions,
   selectMovie,
   setIsResultVisible,
   setResults,
@@ -14,7 +14,7 @@ import LiItem from "../../molecules/LiItem";
 import { StyledAnswearList } from "./StyledAnswearsList";
 
 const AnswearsList = () => {
-  const selectedRandomNumbers = useSelector((state) => state.randomNumbers);
+  const selectedAnswerOptions = useSelector((state) => state.answerOptions);
   const selectedSecondsAmount = useSelector((state) => state.secondsAmount);
   const selectedMovie = useSelector((state) => state.selectedMovie);
   const selectedIsResultVisible = useSelector((state) => state.isResultVisible);
@@ -23,21 +23,24 @@ const AnswearsList = () => {
 
   const dispatch = useDispatch();
 
-  const chooseRandomNumbers = () => {
+  const lossButtonClass = "lossBackground";
+  const winButtonClass = "winBackground";
+
+  const chooseAnswerOptions = () => {
     const set = new Set();
-    while (set.size < selectedRandomNumbers.length) {
+    while (set.size < selectedAnswerOptions.length) {
       set.add(Math.floor(Math.random() * moviesData.length));
     }
 
-    dispatch(createRandomNumbers([...set]));
+    dispatch(createAnswerOptions([...set]));
   };
 
   const selectMovieFunction = () => {
     dispatch(
       selectMovie(
         moviesData[
-          selectedRandomNumbers[
-            Math.floor(Math.random() * selectedRandomNumbers.length)
+          selectedAnswerOptions[
+            Math.floor(Math.random() * selectedAnswerOptions.length)
           ]
         ]
       )
@@ -45,19 +48,19 @@ const AnswearsList = () => {
   };
 
   useEffect(() => {
-    chooseRandomNumbers();
+    chooseAnswerOptions();
   }, []);
 
   useEffect(() => {
     selectMovieFunction();
-  }, [selectedRandomNumbers]);
+  }, [selectedAnswerOptions]);
 
   useEffect(() => {
     showAnswearOptions();
   }, [selectedMovie]);
 
-  const checkResult = (movie) => {
-    const isAnswearCorrect = movie === selectedMovie.title ? true : false;
+  const checkResult = (answer) => {
+    const isAnswearCorrect = answer === selectedMovie.title ? true : false;
     const timeToAnswear = selectedSecondsAmount;
     const result = {
       isAnswearCorrect,
@@ -67,16 +70,20 @@ const AnswearsList = () => {
     return isAnswearCorrect;
   };
 
-  const nextRound = () => {
+  const clearButtonStyle = () => {
     [...ref.current.querySelectorAll("button")].map((li) => {
-      if (li.classList.contains("lossBackground")) {
-        li.classList.remove("lossBackground");
-      } else if (li.classList.contains("winBackground")) {
-        li.classList.remove("winBackground");
+      if (li.classList.contains(lossButtonClass)) {
+        li.classList.remove(lossButtonClass);
+      } else if (li.classList.contains(winButtonClass)) {
+        li.classList.remove(winButtonClass);
       }
     });
+  };
+
+  const nextRound = () => {
+    clearButtonStyle();
     dispatch(setSecondsAmount(0));
-    chooseRandomNumbers();
+    chooseAnswerOptions();
     dispatch(setIsResultVisible(false));
   };
 
@@ -84,9 +91,8 @@ const AnswearsList = () => {
     return (
       <ol type="A" ref={ref}>
         {moviesData.map(({ title }, i) =>
-          selectedRandomNumbers.includes(i) ? (
-            // <LiItem movie={movie} />
-            <li>
+          selectedAnswerOptions.includes(i) ? (
+            <li key={i}>
               <button
                 className="liButton"
                 disabled={selectedIsResultVisible || !selectedSecondsAmount}
@@ -111,13 +117,12 @@ const AnswearsList = () => {
     <StyledAnswearList>
       <Header>Twoja odpowiedź:</Header>
       {showAnswearOptions()}
-      {/* <Button onClick={nextRound}>Następne</Button> */}
-      <button className="button" onClick={nextRound}>
-        Następne
-      </button>
       <h4 className={selectedIsResultVisible ? "isActive" : ""}>
         Prawidłowa odpowiedź: {selectedMovie.title}
       </h4>
+      <button className="button" onClick={nextRound}>
+        Następne
+      </button>
     </StyledAnswearList>
   );
 };

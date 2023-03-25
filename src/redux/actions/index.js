@@ -6,6 +6,12 @@ export const toggleMobileMenu = () => {
   };
 };
 
+export const closeMobileMenu = () => {
+  return {
+    type: actionTypes.CLOSE_MOBILE_MENU,
+  };
+};
+
 export const setSecondsAmount = (payload) => {
   return {
     type: actionTypes.SET_SECONDS_AMOUNT,
@@ -20,9 +26,9 @@ export const selectMovie = (payload) => {
   };
 };
 
-export const createRandomNumbers = (payload) => {
+export const createAnswerOptions = (payload) => {
   return {
-    type: actionTypes.CREATE_RANDOM_NUMBERS,
+    type: actionTypes.CREATE_ANSWER_OPTIONS,
     payload,
   };
 };

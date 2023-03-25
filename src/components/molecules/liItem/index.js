@@ -10,7 +10,6 @@ const LiItem = ({ movie }) => {
 
   const checkResult = (movie) => {
     let result = movie === selectedMovie.title ? true : false;
-    console.log(result);
     dispatch(setResults(result));
     return result;
   };

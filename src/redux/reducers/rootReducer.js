@@ -4,7 +4,7 @@ const initialState = {
   isMobileMenuActive: false,
   secondsAmount: 0,
   selectedMovie: {},
-  randomNumbers: [0, 0, 0, 0],
+  answerOptions: [0, 0, 0, 0],
   results: [],
   isResultVisible: false,
   timeRange: [0, 0],
@@ -21,6 +21,12 @@ const rootReducer = (state = initialState, action) => {
         isMobileMenuActive: !state.isMobileMenuActive,
       };
 
+    case actionTypes.CLOSE_MOBILE_MENU:
+      return {
+        ...state,
+        isMobileMenuActive: false,
+      };
+
     case actionTypes.SET_SECONDS_AMOUNT:
       return {
         ...state,
@@ -33,10 +39,10 @@ const rootReducer = (state = initialState, action) => {
         selectedMovie: payload,
       };
 
-    case actionTypes.CREATE_RANDOM_NUMBERS:
+    case actionTypes.CREATE_ANSWER_OPTIONS:
       return {
         ...state,
-        randomNumbers: payload,
+        answerOptions: payload,
       };
 
     case actionTypes.SET_RESULTS:

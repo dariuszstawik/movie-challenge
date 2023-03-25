@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { closeMobileMenu } from "../../../redux/actions";
 import LiLink from "../../atoms/LiLink";
 import { navLinksData } from "./navLinksData";
 import { StyledNavLinks } from "./StyledNavLinks";
@@ -13,11 +14,13 @@ const NavLinks = ({ children }) => {
 
   return (
     <StyledNavLinks isMobileMenuActive={selectedIsMobileMenuActive}>
-      {navLinksData.map(({ path, content }) => {
+      {navLinksData.map(({ path, content }, i) => {
         return (
-          <LiLink>
+          <LiLink key={i}>
             {" "}
-            <Link to={path}>{content}</Link>
+            <Link to={path} onClick={() => dispatch(closeMobileMenu())}>
+              {content}
+            </Link>
           </LiLink>
         );
       })}

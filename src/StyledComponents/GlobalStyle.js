@@ -20,7 +20,6 @@ height: 100vh;
 font-family: "Montserrat";
 font-size: 15px;
 margin:0;
-/* background-image: url(${charlieChaplinImg}); */
 };
 
 `;

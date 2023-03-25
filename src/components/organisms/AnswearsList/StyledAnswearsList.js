@@ -8,6 +8,7 @@ export const StyledAnswearList = styled.div`
 
   h4 {
     visibility: hidden;
+    margin-bottom: 0;
   }
 
   .isActive {
