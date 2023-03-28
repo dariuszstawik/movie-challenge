@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/movie-challenge/static/js/main.e8483414.js",
+    "main.js": "/movie-challenge/static/js/main.4f7dcc37.js",
     "static/js/787.2eca7e12.chunk.js": "/movie-challenge/static/js/787.2eca7e12.chunk.js",
     "static/media/charlie-chaplin.png": "/movie-challenge/static/media/charlie-chaplin.17fad815e1dc6b5cc34d.png",
     "static/media/ChicagoNeon.woff": "/movie-challenge/static/media/ChicagoNeon.6c55021bf7c654586970.woff",
     "index.html": "/movie-challenge/index.html",
-    "main.e8483414.js.map": "/movie-challenge/static/js/main.e8483414.js.map",
+    "main.4f7dcc37.js.map": "/movie-challenge/static/js/main.4f7dcc37.js.map",
     "787.2eca7e12.chunk.js.map": "/movie-challenge/static/js/787.2eca7e12.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e8483414.js"
+    "static/js/main.4f7dcc37.js"
   ]
 }
