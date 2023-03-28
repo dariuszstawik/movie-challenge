@@ -15,8 +15,11 @@ html {
 
 body {
 width: 100vw;
-overflow: hidden;
-height: 100vh;
+overflow-X: hidden;
+height: 110vh;
+@media(min-width: ${({ theme }) => theme.media.desktop}) {
+    height: 100vh;
+} 
 font-family: "Montserrat";
 font-size: 15px;
 margin:0;

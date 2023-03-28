@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledStartForm = styled.form`
+  /* visibility: ${(props) =>
+    props.isVisible === true ? "hidden" : "visible"}; */
   position: relative;
   display: block;
   width: 100%;

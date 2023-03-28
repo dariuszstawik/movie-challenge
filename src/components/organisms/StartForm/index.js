@@ -46,7 +46,7 @@ const StartForm = () => {
 
   return (
     <StyledStartForm
-      visibility={selectedIsYoutubePlayerVisible}
+      // isVisible={selectedIsYoutubePlayerVisible}
       onSubmit={handleStartForm}
     >
       <div>
