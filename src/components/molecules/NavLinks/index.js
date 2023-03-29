@@ -10,15 +10,19 @@ const NavLinks = ({ children }) => {
   const selectedIsMobileMenuActive = useSelector(
     (state) => state.isMobileMenuActive
   );
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   return (
     <StyledNavLinks isMobileMenuActive={selectedIsMobileMenuActive}>
       {navLinksData.map(({ path, content }, i) => {
         return (
           <LiLink key={i}>
-            {" "}
-            <Link to={path} onClick={() => dispatch(closeMobileMenu())}>
+            <Link
+              to={path}
+              onClick={() => {
+                dispatch(closeMobileMenu());
+              }}
+            >
               {content}
             </Link>
           </LiLink>

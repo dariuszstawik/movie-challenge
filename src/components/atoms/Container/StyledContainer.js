@@ -3,7 +3,7 @@ import charlieChaplinImg from "./charlie-chaplin.png";
 
 export const StyledContainer = styled.div`
   width: 100vw;
-  min-height: 110vh;
+  height: 125vh;
 
   @media (min-width: ${({ theme }) => theme.media.desktop}) {
     min-height: 100vh;

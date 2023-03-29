@@ -10,5 +10,9 @@ export const StyledContentBox = styled.div`
 
   @media (min-width: ${({ theme }) => theme.media.desktop}) {
     padding-left: 120px;
-  } ;
+  }
+
+  .paragraph {
+    line-height: 1.5;
+  }
 `;

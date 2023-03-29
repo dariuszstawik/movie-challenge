@@ -19,9 +19,6 @@ export const StyledNavLinks = styled.ul`
       line-height: 4.5;
       background-color: white;
       width: 40%;
-      /* position: absolute;
-      right: -30px;
-      top: 0; */
       z-index: 1;
     `}
 
