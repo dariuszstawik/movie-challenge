@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import ChicagoNeon from "./ChicagoNeon.woff";
-import charlieChaplinImg from "./charlie-chaplin.png";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -15,8 +14,8 @@ html {
 
 body {
 width: 100vw;
-overflow-X: hidden;
-height: 110vh;
+overflow: hidden;
+height: 120vh;
 @media(min-width: ${({ theme }) => theme.media.desktop}) {
     height: 100vh;
 } 

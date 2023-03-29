@@ -7,11 +7,11 @@ import {
 } from "./StyledStartForm";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  setIsResultVisible,
   setSecondsAmount,
   setTimeRange,
   setYoutubeVisibility,
 } from "../../../redux/actions";
-import Input from "../../atoms/Input/";
 
 const StartForm = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,14 @@ const StartForm = () => {
   const selectedIsYoutubePlayerVisible = useSelector(
     (state) => state.selectedIsYoutubePlayerVisible
   );
+
+  useEffect(() => {
+    dispatch(setSecondsAmount(0));
+  }, []);
+
+  useEffect(() => {
+    dispatch(setIsResultVisible(false));
+  }, []);
 
   const showYoutubePlayer = () => {
     selectedSecondsAmount && dispatch(setYoutubeVisibility(true));
