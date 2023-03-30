@@ -15,7 +15,7 @@ html {
 body {
 width: 100vw;
 overflow-x: hidden;
-min-height: 100vh;
+min-height: 120vh;
 max-height: 180vh;
 @media(min-width: ${({ theme }) => theme.media.desktopLarge}) {
     height: 100vh;
