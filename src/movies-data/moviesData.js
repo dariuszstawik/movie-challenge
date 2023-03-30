@@ -131,8 +131,8 @@ export const moviesData = [
   },
   {
     id: "27",
-    title: "Alternatywy 4",
-    youtubeId: "WiV2N8k2ViI",
+    title: "Wiosna, panie sierżancie",
+    youtubeId: "QqHLbLjxgkM",
   },
   {
     id: "28",
@@ -183,10 +183,5 @@ export const moviesData = [
     id: "37",
     title: "Przepraszam, czy tu biją?",
     youtubeId: "xyyTw3ezdas",
-  },
-  {
-    id: "38",
-    title: "Wiosna, panie sierżancie",
-    youtubeId: "QqHLbLjxgkM",
   },
 ];

@@ -14,9 +14,10 @@ html {
 
 body {
 width: 100vw;
-overflow: hidden;
-height: 125vh;
-@media(min-width: ${({ theme }) => theme.media.desktop}) {
+overflow-x: hidden;
+min-height: 100vh;
+max-height: 180vh;
+@media(min-width: ${({ theme }) => theme.media.desktopLarge}) {
     height: 100vh;
 } 
 font-family: "Montserrat";

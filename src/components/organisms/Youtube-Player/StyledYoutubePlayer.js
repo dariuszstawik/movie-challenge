@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const StyledYoutubePlayer = styled.div`
   width: 280px;
-  /* height: 500px; */
-  margin-bottom: 300px;
+  margin-bottom: 10000px;
   position: relative;
   background-color: black;
   z-index: 1;
