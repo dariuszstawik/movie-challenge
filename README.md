@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+![cover](./Co_to_za_film_screen.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Co to za film? - movie challenge app
 
-In the project directory, you can run:
+This application is a movie quiz modeled after a popular music quiz show.
 
-### `npm start`
+You can see and try this application here: [https://dariuszstawik.github.io/movie-challenge/](https://dariuszstawik.github.io/movie-challenge/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How does it work?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Say after how many seconds you guess the title of the movie. Can you manage after one? In the "statistics" tab you can check the number of correct and incorrect answers, as well as the average time for a good one. 
 
-### `npm test`
+Note that it is better to run this app on desktop because Youtube Api blocks autoplay on mobile devices. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Have fun!
 
-### `npm run build`
+## Further plans
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Currently in the application's database there are approx. 30 films - older Polish productions, which are available in full on Youtube. Ultimately, the player will be able to choose from several categories (e.g. Oscars, festival films, comedies). The basis in this case will be not whole films, but trailers. Functionality and base are currently being prepared.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the future, I also plan to create a game option for 2 and more players.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technology stack
 
-### `npm run eject`
+In this project I used:
+- React,
+- Redux,
+- Styled Components.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I created the layout using Inkscape.
