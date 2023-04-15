@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const StyledStartForm = styled.form`
-  /* visibility: ${(props) =>
-    props.isVisible === true ? "hidden" : "visible"}; */
-  position: relative;
   display: block;
   width: 100%;
   position: relative;
@@ -34,7 +31,6 @@ export const StyledInputAndButtonWrapper = styled.div`
     border: 1px solid gray;
     padding: 3%;
     margin-bottom: 10px;
-    /* margin-top: 0; */
     margin-left: 0;
     margin-right: 20px;
     @media (min-width: ${({ theme }) => theme.media.desktop}) {
@@ -48,16 +44,16 @@ export const StyledInputAndButtonWrapper = styled.div`
   Button {
     box-sizing: border-box;
     width: 80px;
-    height: 40px;
+    height: 42px;
     display: block;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 10px;
     position: relative;
     border: none;
+    flex-shrink: 0;
 
     @media (min-width: ${({ theme }) => theme.media.desktop}) {
-      width: 220px;
       margin-right: 0;
       margin-top: 10px;
       margin-bottom: 0;
@@ -65,23 +61,18 @@ export const StyledInputAndButtonWrapper = styled.div`
 
     &::after {
       content: "";
-      width: 80px;
+      width: 78px;
       height: 40px;
       background-color: transparent;
       border: 1px solid black;
       position: absolute;
-      top: 5px;
+      top: 7px;
       left: -7px;
+      transition: 0.2s;
     }
 
     &:hover {
       &::after {
-        content: "";
-        width: 80px;
-        height: 40px;
-        background-color: transparent;
-        border: 1px solid black;
-        position: absolute;
         top: 0;
         left: 0;
       }

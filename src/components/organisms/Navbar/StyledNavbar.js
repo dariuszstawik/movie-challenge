@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledNavbar = styled.div`
+  z-index: 1;
   width: 72%;
   box-sizing: border-box;
   border-top: 3px solid black;

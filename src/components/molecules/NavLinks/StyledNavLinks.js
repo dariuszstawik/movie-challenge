@@ -14,6 +14,10 @@ export const StyledNavLinks = styled.ul`
   ${({ isMobileMenuActive }) =>
     isMobileMenuActive &&
     css`
+      position: absolute;
+      top: 0;
+      right: 0;
+
       display: flex;
       flex-direction: column;
       line-height: 4.5;

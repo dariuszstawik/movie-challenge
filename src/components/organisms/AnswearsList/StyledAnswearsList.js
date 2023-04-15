@@ -63,20 +63,15 @@ export const StyledAnswearList = styled.div`
       background-color: transparent;
       border: 1px solid black;
       position: absolute;
-      top: 5px;
+      top: 7px;
       left: -7px;
+      transition: 0.2s;
     }
 
     &:hover {
       &::after {
-        content: "";
-        width: 110px;
-        height: 45px;
-        background-color: transparent;
-        border: 1px solid black;
-        position: absolute;
-        top: 0;
-        left: 0;
+        top: -1px;
+        left: -1px;
       }
     }
   }
