@@ -13,7 +13,7 @@ import Header from "../../atoms/Header";
 import LiItem from "../../molecules/LiItem";
 import { StyledAnswearList } from "./StyledAnswearsList";
 
-const AnswearsList = () => {
+const AnswearsList = ({ onSelect }) => {
   const selectedAnswerOptions = useSelector((state) => state.answerOptions);
   const selectedSecondsAmount = useSelector((state) => state.secondsAmount);
   const selectedMovie = useSelector((state) => state.selectedMovie);
@@ -85,6 +85,7 @@ const AnswearsList = () => {
     dispatch(setSecondsAmount(0));
     chooseAnswerOptions();
     dispatch(setIsResultVisible(false));
+    onSelect();
   };
 
   const showAnswearOptions = () => {
