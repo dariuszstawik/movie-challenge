@@ -8,12 +8,10 @@ import {
   setResults,
   setSecondsAmount,
 } from "../../../redux/actions";
-import Button from "../../atoms/Button";
 import Header from "../../atoms/Header";
-import LiItem from "../../molecules/LiItem";
-import { StyledAnswearList } from "./StyledAnswearsList";
+import { StyledAnswerList } from "./StyledAnswersList";
 
-const AnswearsList = ({ onSelect }) => {
+const AnswersList = ({ onSelect }) => {
   const selectedAnswerOptions = useSelector((state) => state.answerOptions);
   const selectedSecondsAmount = useSelector((state) => state.secondsAmount);
   const selectedMovie = useSelector((state) => state.selectedMovie);
@@ -56,18 +54,18 @@ const AnswearsList = ({ onSelect }) => {
   }, [selectedAnswerOptions]);
 
   useEffect(() => {
-    showAnswearOptions();
+    showAnswerOptions();
   }, [selectedMovie]);
 
   const checkResult = (answer) => {
-    const isAnswearCorrect = answer === selectedMovie.title ? true : false;
-    const timeToAnswear = selectedSecondsAmount;
+    const isAnswerCorrect = answer === selectedMovie.title ? true : false;
+    const timeToAnswer = selectedSecondsAmount;
     const result = {
-      isAnswearCorrect,
-      timeToAnswear,
+      isAnswerCorrect,
+      timeToAnswer,
     };
     dispatch(setResults(result));
-    return isAnswearCorrect;
+    return isAnswerCorrect;
   };
 
   const clearButtonStyle = () => {
@@ -88,7 +86,7 @@ const AnswearsList = ({ onSelect }) => {
     onSelect();
   };
 
-  const showAnswearOptions = () => {
+  const showAnswerOptions = () => {
     return (
       <ol type="A" ref={ref}>
         {moviesData.map(({ title }, i) =>
@@ -115,17 +113,17 @@ const AnswearsList = ({ onSelect }) => {
     );
   };
   return (
-    <StyledAnswearList>
+    <StyledAnswerList>
       <Header>Twoja odpowiedź:</Header>
-      {showAnswearOptions()}
+      {showAnswerOptions()}
       <h4 className={selectedIsResultVisible ? "isActive" : ""}>
         Prawidłowa odpowiedź: {selectedMovie.title}
       </h4>
       <button className="button" onClick={nextRound}>
         Następne
       </button>
-    </StyledAnswearList>
+    </StyledAnswerList>
   );
 };
 
-export default AnswearsList;
+export default AnswersList;

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Container from "../components/atoms/Container";
 import ContentBox from "../components/atoms/ContentBox";
 import Navbar from "../components/organisms/Navbar";

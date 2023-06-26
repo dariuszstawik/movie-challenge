@@ -5,20 +5,20 @@ import Header from "../../atoms/Header";
 const Stats = () => {
   const selectedResults = useSelector((state) => state.results);
 
-  const answearStats = (isTrueOrFalse) => {
+  const answerStats = (isTrueOrFalse) => {
     return selectedResults.filter(
-      ({ isAnswearCorrect }) => isAnswearCorrect === isTrueOrFalse
+      ({ isAnswerCorrect }) => isAnswerCorrect === isTrueOrFalse
     ).length;
   };
 
   const timeStats = () => {
     const correctAnswers = selectedResults.filter(
-      ({ isAnswearCorrect }) => isAnswearCorrect === true
+      ({ isAnswerCorrect }) => isAnswerCorrect === true
     );
 
     let totalTimeToAnswer = 0;
     correctAnswers.forEach(
-      ({ timeToAnswear }) => (totalTimeToAnswer += timeToAnswear)
+      ({ timeToAnswer }) => (totalTimeToAnswer += timeToAnswer)
     );
     return isNaN(totalTimeToAnswer / correctAnswers.length)
       ? ""
@@ -28,8 +28,8 @@ const Stats = () => {
   return (
     <div>
       <Header>Statystyki Twojej gry:</Header>
-      <p>Dobre odpowiedzi: {answearStats(true)}</p>
-      <p>Błędne odpowiedzi: {answearStats(false)}</p>
+      <p>Dobre odpowiedzi: {answerStats(true)}</p>
+      <p>Błędne odpowiedzi: {answerStats(false)}</p>
       <p>Średni czas na dobrą odpowiedź: {timeStats()} sek.</p>
     </div>
   );

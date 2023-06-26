@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import AnswearsList from "../../components/organisms/AnswearsList";
+import AnswersList from "../../components/organisms/AnswersList";
 import StartForm from "../../components/organisms/StartForm";
 import YoutubePlayer from "../../components/organisms/Youtube-Player";
 
@@ -23,24 +23,11 @@ const Start = () => {
         ""
       )}
       {!afterMovie && <StartForm />}
-      <AnswearsList
+      <AnswersList
         onSelect={() => {
           setAfterMovie(false);
         }}
       />
-
-      {/* {selectedSecondsAmount && !selectedIsYoutubePlayerVisible && (
-        <AnswearsList />
-      )}
-
-      {!selectedSecondsAmount ? (
-        <>
-          <StartForm />
-          <AnswearsList />
-        </>
-      ) : (
-        ""
-      )} */}
     </>
   );
 };

@@ -42,31 +42,39 @@ const StartForm = () => {
 
   const handleStartForm = (e) => {
     e.preventDefault();
-    dispatch(setSecondsAmount(Number(e.target.seconds.value)));
+    dispatch(
+      setSecondsAmount(
+        Number(e.target.seconds.value) < 30
+          ? Number(e.target.seconds.value)
+          : 30
+      )
+    );
     e.target.reset();
   };
 
   const setTimeRangeFunction = () => {
-    const start = Math.floor(Math.random() * 3000);
+    const start = Math.floor(Math.random() * 50) + 15;
     const end = start + selectedSecondsAmount;
     dispatch(setTimeRange([start, end]));
   };
 
   return (
-    <StyledStartForm
-      // isVisible={selectedIsYoutubePlayerVisible}
-      onSubmit={handleStartForm}
-    >
+    <StyledStartForm onSubmit={handleStartForm}>
       <div>
         <Header>Po ilu sekundach zgadniesz tytuł?</Header>
         <p>
-          Wpisz dowolną liczbę sekund - po kliknięciu 'Graj' zobaczysz losowy
-          fragment jednego z czterech filmów wymienionych poniżej. Odpowiedzi
-          będą klikalne po wyświetleniu wideo.
+          Wpisz obok dowolną liczbę sekund w przedziale od 1 do 30. Po
+          kliknięciu 'Graj' zobaczysz losowy fragment jednego z czterech filmów
+          (zwiastunów) wymienionych poniżej. Odpowiedzi będą klikalne po
+          wyświetleniu wideo.
         </p>
       </div>
       <StyledInputAndButtonWrapper>
-        <input id="seconds" name="seconds" placeholder="wpisz___"></input>
+        <input
+          id="seconds"
+          name="seconds"
+          placeholder="wpisz liczbę ___"
+        ></input>
         <Button type="submit">Graj</Button>
       </StyledInputAndButtonWrapper>
     </StyledStartForm>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAnswearList = styled.div`
+export const StyledAnswerList = styled.div`
   width: 100%;
   position: relative;
   background-color: white;
@@ -77,9 +77,9 @@ export const StyledAnswearList = styled.div`
   }
 
   .winBackground {
-    background-color: green;
+    background-color: #23de6a;
   }
   .lossBackground {
-    background-color: red;
+    background-color: #de2923;
   }
 `;

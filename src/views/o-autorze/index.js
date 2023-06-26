@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../../components/atoms/Header";
 import Paragraph from "../../components/atoms/Paragraph";
 import { StyledOAutorze } from "./StyledOAutorze";
@@ -11,7 +10,7 @@ const OAutorze = () => {
 
       <Paragraph>
         Junior Frontend Developer. Stack technologiczny: Javascript, React,
-        Redux, Git, Material UI, Contentful.{" "}
+        Redux, Next.js, Typescript, Git, Tailwind CSS, Contentful.{" "}
         <a href="https://www.linkedin.com/in/dariusz-stawik/" target="_blank">
           Profil na Linkedin
         </a>{" "}
@@ -31,7 +30,7 @@ const OAutorze = () => {
         </a>
         . Byłem inicjatorem wdrożenia mechanizmów grywalizacji do wolontariatu
         szkolnego, w projekcie zajmowałem się copywritingiem, obsługą kanałów
-        social media oraz kontaktem z mediami, w ostatniej edycji pełniłem rolę
+        social media oraz kontaktem z mediami, w trzeciej edycji pełniłem rolę
         koordynatora.
       </Paragraph>
       <Header>Współpraca </Header>

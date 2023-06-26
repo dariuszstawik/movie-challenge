@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import YouTube from "react-youtube";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { setYoutubeVisibility } from "../../../redux/actions";
 import { StyledYoutubePlayer } from "./StyledYoutubePlayer";
@@ -30,31 +29,8 @@ const YoutubePlayer = ({ onMovieEnd }) => {
     }
   };
 
-  const opts = {
-    height: "460",
-    width: videoWidth(),
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      rel: 0,
-      start: selectedTimeRange[0],
-      end: selectedTimeRange[1],
-      origin: "http://localhost:3000",
-    },
-  };
-
   return (
     <StyledYoutubePlayer>
-      {/* <YouTube
-        videoId={selectedMovie.youtubeId}
-        opts={opts}
-        loading="eager"
-        onEnd={() => {
-          dispatch(setYoutubeVisibility(false));
-          onMovieEnd();
-        }}
-      ></YouTube> */}
-
       <ReactPlayer
         url={`https://youtu.be/${selectedMovie.youtubeId}`}
         playing={true}

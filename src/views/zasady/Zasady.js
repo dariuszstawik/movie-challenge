@@ -14,10 +14,8 @@ const Zasady = () => {
       <Paragraph>
         Na stronie głównej zobaczysz prośbę o podanie liczby sekund oraz cztery
         tytuły. Po kliknięciu "Graj" wyświetli się losowy fragment jednego z
-        czterech filmów (np. jeśli wpiszesz "10", zobaczysz dziesięciosekundowe
-        wideo). Jeżeli korzystasz z alikacji na laptopie lub komputerze
-        stacjonarnym, odtwarzanie rozpocznie się automatycznie, na urządzeniach
-        mobilnych trzeba kliknąć play.
+        czterech filmów (a konkretniej zwiastunów; np. jeśli wpiszesz "10",
+        zobaczysz dziesięciosekundowe wideo).
       </Paragraph>
       <Paragraph>
         Po obejrzeniu zaznacz swoją odpowiedź. Po kliknięciu "następne"
